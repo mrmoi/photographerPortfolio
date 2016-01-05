@@ -16,25 +16,26 @@
     padding: 2% 0;
 }
 .green {
-    background-color: aquamarine;
+    background-color: black;
 }
 /* Typography
 ---------------------------------------------- */
 body {
-    font-family: 'Abel', sans-serif;
+    font-family: 'Oswald', sans-serif;
     font-size: 1.5em;
     color: black;
 }
 h2 {
-    font-family: 'Montserrat', cursive;
+    font-family: 'Candal', cursive;
     font-size: 3em;
     margin: 0.67em;
 }
 h2.bio {
-    color: darkgreen;
+    color: cyan;
 }
 p.bio {
     color: white;
+    
 }
 /* Header & Navigation
 ---------------------------------------------- */
@@ -48,16 +49,14 @@ header.main_nav {
 }
 .logo a {
     font-size: 3em;
-    color: white;
+    color: cyan;
     text-decoration: none;
-    border: 3px solid white;
     text-transform: uppercase;
     padding: 2px 10px 0 10px;
     margin: 0;
 }
 .logo a:hover {
-    background-color: white;
-    color: aquamarine;
+    color: white;
 }
 /* Images & Media
 ---------------------------------------------- */
@@ -68,6 +67,7 @@ img {
 img.avatar {
     width: 200px;
     height: 200px;
+    margin-top: 11%;
     border-radius: 50%;
     border: 5px solid white;
 }
@@ -135,12 +135,15 @@ p.copyright {
     }
     .portfolio img {
         margin-bottom: 10%;
+        width: 100%;
     }
-    .img.avatar {
+    img.avatar {
         margin-top: 15%;
+        margin-left: 20%;
     }
     h2.bio {
-        font-size: 2.5em;
+        font-size: 2.1em;
+        margin-left: 10%;
     }
     p.bio {
         font-size: 1.25em;
