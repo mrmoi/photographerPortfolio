@@ -1,7 +1,3 @@
-<!-- Scripts -->
-
-<!-- Index Page Content
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 <header class="main_nav green">
     <div class="container">
         <div class="twelve columns">
@@ -56,15 +52,16 @@
             <img class="avatar" src="img/azranch.jpg"/>
         </div>
         <div class="eight columns">
-            <h2 class="bio">German D. Gutierrez</h2>
-            <p class="bio">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi faucibus ligula tempor
-                tellus varius pretium. Sed varius posuere dignissim. Donec commodo, metus vitae gravida
-                sollicitudin, neque mi vehicula odio, sed vulputate nunc tellus vitae ipsum. Proin egestas
-                tincidunt massa ut mattis. Ut mollis consequat justo non commodo. Integer laoreet viverra
-                bibendum. Mauris vel sapien arcu. In pellentesque lorem quis felis feugiat, in facilisis
-                nisl consequat. In feugiat dui vel pulvinar varius. Donec a pharetra ligula, in vulputate
-                dolor. Nullam nec consectetur ante.
+
+            <div ng-repeat="(key, x) in names">
+            <h2 class="bio">{{ x.name }}</h2>
+            </div>
+
+            <div ng-repeat="(key, x) in bios">
+            <p class="bio">
+                {{ x.about }}
             </p>
+            </div>
         </div>
     </div>
 </div>
