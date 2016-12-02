@@ -46,6 +46,13 @@ header.main_nav {
 .logo {
     margin: 5% auto;
     text-align: center;
+    text-shadow: 3px 3px 4px silver;
+    border: 3px solid darkslateblue;
+    border-radius: 25px;
+    background-color: rgba(0, 0, 200, 0.4);
+    max-width: 75%;
+    font-family: 'Candal', sans-serif;
+
 }
 .logo a {
     font-size: 3em;
@@ -160,7 +167,10 @@ p.copyright {
 
 
 .navbar {
-    background-color: black;
+    background-color: darkslateblue;
     padding-bottom: 0px;
     margin-bottom: 0px;
+    border: darkslateblue;
+    border-radius: 0px;
+    max-height: 50px;
 }
