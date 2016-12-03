@@ -3,7 +3,7 @@
  */
 
 var myApp = angular.module('myApp', ['ui.router', 'firebase'])
-    .constant('FIREBASE_URL', 'https://germanproductions.firebaseio.com/');
+    .constant('FIREBASE_DB_URL', 'https://germanproductions.firebaseio.com/');
 
 
 myApp.config(function ($stateProvider, $urlRouterProvider) {

@@ -1,17 +1,17 @@
 /**
  * Created by miniMoimartz on 12/1/16.
  */
-myApp.controller('dbController',['$scope','$rootScope','$firebaseAuth','$firebaseArray','FIREBASE_URL',
-    function($scope, $rootScope, $firebaseAuth, $firebaseArray, FIREBASE_URL) {
+myApp.controller('dbController',['$scope','$rootScope','$firebaseAuth','$firebaseArray','FIREBASE_DB_URL',
+    function($scope, $rootScope, $firebaseAuth, $firebaseArray, FIREBASE_DB_URL) {
 
 
         /* NAME FIELD*/
-        var nameRef = new Firebase(FIREBASE_URL + '/name');
+        var nameRef = new Firebase(FIREBASE_DB_URL + '/name');
         var nameInfo = $firebaseArray(nameRef);
         $scope.names = nameInfo;
 
         /* ABOUT ME CONTENT */
-        var bioRef = new Firebase(FIREBASE_URL + '/bio');
+        var bioRef = new Firebase(FIREBASE_DB_URL + '/bio');
         var bioInfo = new $firebaseArray(bioRef);
         var index = bioInfo.$indexFor(bioRef);
         $scope.bios = bioInfo;
