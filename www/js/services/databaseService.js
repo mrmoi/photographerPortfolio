@@ -1,8 +1,8 @@
 /**
  * Created by miniMoimartz on 12/1/16.
  */
-myApp.controller('dbController',['$scope','$rootScope','$firebaseAuth','$firebaseArray','FIREBASE_DB_URL',
-    function($scope, $rootScope, $firebaseAuth, $firebaseArray, FIREBASE_DB_URL) {
+myApp.controller('dbController',['$scope','$rootScope','$firebaseAuth','$firebaseArray','FIREBASE_DB_URL','$location',
+    function($scope, $rootScope, $firebaseAuth, $firebaseArray, FIREBASE_DB_URL, $location) {
 
 
         /* NAME FIELD*/
@@ -37,6 +37,8 @@ myApp.controller('dbController',['$scope','$rootScope','$firebaseAuth','$firebas
             });
         };
 
+
+        $scope.myUrl = $location.absUrl();
 /*
         /!* DELETE BIO *!/
         $scope.deleteBio = function() {
