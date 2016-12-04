@@ -174,3 +174,11 @@ p.copyright {
     border-radius: 0px;
     max-height: 50px;
 }
+
+progress {
+    width: 200px;
+    height: 25px;
+    border: 1px solid darkgreen;
+    border-radius: 25px;
+    background-color: limegreen;
+}

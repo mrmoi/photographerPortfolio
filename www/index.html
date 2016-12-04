@@ -96,20 +96,23 @@
 
 
 
-
-
 <!-- angular view --->
 <ui-view></ui-view>
 <!-- ---------------->
 
-<div ng-hide="location.path() == '#/control'">
-<progress value="0" max="100" id="uploader">0%</progress>
-<input type="file" value="upload" id="fileButton">
+
+<!-- SHOW THIS DIV BASED ON THE CURRENT STATE - IN THIS CASE ONLY SHOW ON THE CONTROL STATE -->
+<div ng-controller="dbController" ng-show="uiRouterState.current.name == 'control'">
+    <progress value="0" max="100" id="uploader">0%</progress>
+    <input type="file" value="upload" id="fileButton">
 </div>
 
 
 
-
+<!--<div ng-controller="dbController" ng-show="myUrl == '/control'">
+    <progress value="0" max="100" id="uploader">0%</progress>
+    <input type="file" value="upload" id="fileButton">
+</div>-->
 
 
 
