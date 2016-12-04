@@ -58,6 +58,7 @@
             <ul class="nav navbar-nav navbar-right">
                 <li class="active"><a href="#/home">Home<span class="sr-only">(current)</span></a></li>
                 <li><a href="#/control">Control</a></li>
+                <li><a href="#/upload">Upload</a></li>
                 <!--<li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
                     <ul class="dropdown-menu">
@@ -95,14 +96,13 @@
 </nav>
 
 
+<!-- angular view --->
+<ui-view></ui-view>
+<!-- ---------------->
 
 <progress value="0" max="100" id="uploader">0%</progress>
 <input type="file" value="upload" id="fileButton">
 
-
-<!-- angular view --->
-<ui-view></ui-view>
-<!-- ---------------->
 
 
 <script src="https://www.gstatic.com/firebasejs/3.6.2/firebase.js"></script>
@@ -138,9 +138,9 @@
         // Update the progress bar
         task.on('state_changed',
             function progress(snapshot) {
-              var percentage = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
-            uploader.value = percentage;
-            console.log('im alive..');
+                var percentage = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
+                uploader.value = percentage;
+                console.log('im alive..');
             },
             function error(err) {
                 console.log('Error');
