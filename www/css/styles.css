@@ -46,12 +46,14 @@ header.main_nav {
 .logo {
     margin: 5% auto;
     text-align: center;
-    text-shadow: 3px 3px 4px silver;
+    text-shadow: 3px 3px 4px black;
     border: 3px solid darkslateblue;
-    border-radius: 25px;
-    background-color: rgba(0, 0, 200, 0.4);
+    border-radius: 50px;
+    background-color: rgba(0, 0, 200, 0.5);
     max-width: 75%;
-    font-family: 'Candal', sans-serif;
+    font-family: 'Pacifico', sans-serif;
+    font-size: 1.5em;
+    font-weight: bold;
 
 }
 .logo a {
@@ -61,6 +63,7 @@ header.main_nav {
     text-transform: uppercase;
     padding: 2px 10px 0 10px;
     margin: 0;
+    font-size: 1.5em;
 }
 .logo a:hover {
     color: white;

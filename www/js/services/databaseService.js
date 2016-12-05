@@ -10,13 +10,6 @@ myApp.controller('dbController',['$scope','$rootScope','$firebaseAuth','$firebas
         var nameInfo = $firebaseArray(nameRef);
         $scope.names = nameInfo;
 
-        /* ABOUT ME CONTENT */
-        var bioRef = new Firebase(FIREBASE_DB_URL + '/bio');
-        var bioInfo = new $firebaseArray(bioRef);
-        var index = bioInfo.$indexFor(bioRef);
-        $scope.bios = bioInfo;
-
-
         /* NAME FIELD FUNCTION */
         $scope.addName = function() {
             nameInfo.$add({
@@ -27,16 +20,34 @@ myApp.controller('dbController',['$scope','$rootScope','$firebaseAuth','$firebas
             });
         };
 
-        /* ABOUT ME CONTENT FUNCTION */
+
+        /////////////////////////////////////////////////////////
+        /* BIO CONTENT */
+        var bioRef = new Firebase(FIREBASE_DB_URL + '/bio');
+        var bioInfo = new $firebaseArray(bioRef);
+        var index = bioInfo.$indexFor(bioRef);
+        $scope.bios = bioInfo;
+
+        /* BIO FUNCTION */
+        /*
+        BIO_TABLE
+            BIO_NAME
+            BIO_ABOUT
+            BIO_IMAGE_URL
+        */
         $scope.addBio = function () {
             bioInfo.$add({
+                name: $scope.nameField,
                 about: $scope.aboutField,
+                image_url: $scope.imageField,
                 date: Firebase.ServerValue.TIMESTAMP
             }).then(function() {
+                $scope.nameField='';
                 $scope.aboutField='';
+                $scope.imageField='';
             });
         };
-
+        /////////////////////////////////////////////////////////
 
         //$scope.myUrl = $location.path();
 

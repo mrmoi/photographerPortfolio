@@ -11,7 +11,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <!-- FONT –––––––––––––––––––––––––––––––––––––––––––––––––– -->
- <link href='https://fonts.googleapis.com/css?family=Abel|Oswald|Montserrat|Fredoka+One|Candal|Lobster' rel='stylesheet' type='text/css'>
+ <link href='https://fonts.googleapis.com/css?family=Abel|Oswald|Montserrat|Fredoka+One|Candal|Lobster|Nova+Script|Pacifico' rel='stylesheet' type='text/css'>
  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 
   <!-- CSS  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -106,6 +106,7 @@
     <progress value="0" max="100" id="uploader">0%</progress>
     <input type="file" value="upload" id="fileButton">
     <h4>File URL:</h4>
+    <span id="linkurl"></span>
     <span id="linkbox"></span>
 </div>
 
@@ -136,18 +137,13 @@
     console.log('got buttons');
 
     fileButton.addEventListener('change', function (e) {
-
         console.log('getting file..');
-
         // Get file
         var file = e.target.files[0];
-
         console.log('got file');
-
         var metadata = {
             'contentType': file.type
         };
-
         console.log('content type');
 
         // Create storage ref
@@ -160,9 +156,22 @@
             console.log(snapshot.metadata);
             var url = snapshot.metadata.downloadURLs[0];
             console.log('File available at', url);
-            //document.getElementById('linkbox').innerHTML = '<a href="' +  url + '">Click For File</a>';
+            document.getElementById('linkurl').innerHTML = '<a href="' +  url + '">URL: ' + url + '</a>';
             document.getElementById('linkbox').innerHTML = '<img src="' +  url + '">';
             // <img src="smiley.gif" alt="Smiley face" height="42" width="42">
+
+
+            console.log('add link to database...');
+            // store url in database to then retrieve and display in home.html
+            var linkRef = new Firebase('https://germanproductions.firebaseio.com/' + '/link');
+            var list = $firebaseArray(linkRef);
+            list.$add({ imageURL: url }).then(function (ref) {
+                var id = ref.key();
+                console.log("added record with id" + id);
+                list.$indexFor(id);
+            })
+
+
         }).catch(function(error) {
             console.error('Upload failed:', error);
         });
