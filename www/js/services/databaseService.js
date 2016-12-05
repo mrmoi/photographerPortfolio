@@ -22,6 +22,35 @@ myApp.controller('dbController',['$scope','$rootScope','$firebaseAuth','$firebas
 
 
         /////////////////////////////////////////////////////////
+        /* IMAGES CONTENT */
+        /*
+         - Images will have their own table:
+         - IMAGES_TABLE
+            IMAGE_URL
+            IMAGE_NAME
+            IMAGE_LIKES
+        */
+        var imageRef = new Firebase(FIREBASE_DB_URL + '/images');
+        var imageInfo = $firebaseArray(imageRef);
+        $scope.images = imageInfo;
+
+        $scope.addImage = function () {
+            imageInfo.$add({
+                image_name: $scope.image_nameField,
+                image_url: $scope.image_urlField,
+                image_likes: $scope.image_likesField,
+                date: Firebase.ServerValue.TIMESTAMP
+            }).then(function () {
+                $scope.image_nameField='';
+                $scope.image_urlField='';
+                $scope.image_likesField='';
+            });
+        };
+        /////////////////////////////////////////////////////////
+
+
+
+        /////////////////////////////////////////////////////////
         /* BIO CONTENT */
         var bioRef = new Firebase(FIREBASE_DB_URL + '/bio');
         var bioInfo = new $firebaseArray(bioRef);
