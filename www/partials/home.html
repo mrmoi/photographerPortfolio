@@ -11,19 +11,19 @@
 
 <div class="container main">
 
-    <div class="row">
+    <div class="row" ng-repeat="(key, a) in images">
         <div class="four columns portfolio">
-            <a class="image-link" href="img/horseshoebend.jpg"><img src="img/horseshoebend.jpg"></a>
+            <a class="image-link" href="img/horseshoebend.jpg"><img ng-src="{{ a.image_url }}"></a>
+        </div>
+<!--        <div class="four columns portfolio">
+            <a class="image-link" href="img/azranch.jpg"><img ng-src="{{ a.image_url }}"></a>
         </div>
         <div class="four columns portfolio">
-            <a class="image-link" href="img/azranch.jpg"><img src="img/azranch.jpg"></a>
-        </div>
-        <div class="four columns portfolio">
-            <a class="image-link" href="img/grandcanyon1.jpg"><img src="img/grandcanyon1.jpg"></a>
-        </div>
+            <a class="image-link" href="img/grandcanyon1.jpg"><img ng-src="{{ a.image_url }}"></a>
+        </div>-->
     </div>
 
-    <div class="row">
+<!--    <div class="row">
         <div class="four columns portfolio">
             <a class="image-link" href="img/grandcanyon2.jpg"><img src="img/grandcanyon2.jpg"></a>
         </div>
@@ -33,9 +33,9 @@
         <div class="four columns portfolio">
             <a class="image-link" href="img/sedona.jpg"><img src="img/sedona.jpg"></a>
         </div>
-    </div>
+    </div>-->
 
-    <div class="row">
+<!--    <div class="row">
         <div class="four columns portfolio">
             <a class="image-link" href="img/grandcanyon3.jpg"><img src="img/grandcanyon3.jpg"></a>
         </div>
@@ -45,7 +45,7 @@
         <div class="four columns portfolio">
             <a class="image-link" href="img/monumentvalley.jpg"><img src="img/monumentvalley.jpg"></a>
         </div>
-    </div>
+    </div>-->
 
 </div>
 

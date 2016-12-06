@@ -22,12 +22,12 @@ myApp.controller('dbController',['$scope','$rootScope','$firebaseAuth','$firebas
             imageInfo.$add({
                 image_name: $scope.image_nameField,
                 image_url: $scope.image_urlField,
-                image_likes: $scope.image_likesField,
+                //image_likes: $scope.image_likesField,
                 date: Firebase.ServerValue.TIMESTAMP
             }).then(function () {
                 $scope.image_nameField='';
                 $scope.image_urlField='';
-                $scope.image_likesField='';
+                //$scope.image_likesField='';
             });
         };
         /////////////////////////////////////////////////////////
