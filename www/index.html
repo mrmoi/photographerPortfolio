@@ -102,6 +102,8 @@
 
 
 <!-- SHOW THIS DIV BASED ON THE CURRENT STATE - IN THIS CASE ONLY SHOW ON THE CONTROL STATE -->
+<div class="container">
+    <form>
 <div ng-controller="dbController" ng-show="uiRouterState.current.name == 'control'">
     <progress value="0" max="100" id="uploader">0%</progress>
     <input type="file" value="upload" id="fileButton">
@@ -109,14 +111,8 @@
     <span id="linkurl"></span>
     <span id="linkbox"></span>
 </div>
-
-
-
-<!--<div ng-controller="dbController" ng-show="myUrl == '/control'">
-    <progress value="0" max="100" id="uploader">0%</progress>
-    <input type="file" value="upload" id="fileButton">
-</div>-->
-
+    </form>
+</div>
 
 
 <script src="https://www.gstatic.com/firebasejs/3.6.2/firebase.js"></script>

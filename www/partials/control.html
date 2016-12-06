@@ -1,14 +1,9 @@
 <div class="container">
-    <form ng-submit="addName()">
-        <h4>Name</h4>
-        <input type="text" ng-model="nameField">
-        <button type="submit"></button>
-    </form>
-
+    <h3>Share something about you</h3>
     <form ng-submit="addBio()">
         <div class="form-group form-group-lg">
             <label>Name</label>
-            <input type="text" ng-model="aboutField" placeholder="Add your name so everyone could see!!!">
+            <input type="text" ng-model="nameField" placeholder="Add your name so everyone could see!!!">
         </div>
         <div class="form-group">
             <label>About</label>
@@ -16,12 +11,42 @@
         </div>
         <div class="form-group">
             <label>Image URL</label>
-            <input type="text" ng-model="aboutField" placeholder="Paste your portrait's link here!">
+            <input type="text" ng-model="imageField" placeholder="Paste your portrait's link here!">
         </div>
 
-        <button type="submit"></button>
+        <button type="submit">Submit</button>
     </form>
+
+    <h3>Add photos to your portfolio</h3>
+    <form ng-submit="addImage()">
+        <div class="form-group form-group-lg">
+            <label>Photo Name</label>
+            <input type="text" ng-model="image_nameField" placeholder="Name your photo!!">
+        </div>
+        <div class="form-group">
+            <label>Photo Link</label>
+            <textarea type="text" ng-model="image_urlField" placeholder="Copy the link here"></textarea>
+        </div>
+        <!-- IMAGE LIKES WILL BE ADDED TO THE HOME.HTML PAGE -->
+<!--        <div class="form-group">
+            <label>IMAGE LIKES</label>
+            <input type="text" ng-model="imageField" placeholder="">
+        </div>-->
+
+        <button type="submit">Submit</button>
+    </form>
+
+    <h3>Store your images</h3>
 </div>
 
 
 
+
+
+
+
+<!--<form ng-submit="addName()">
+    <h4>Name</h4>
+    <input type="text" ng-model="nameField">
+    <button type="submit"></button>
+</form>-->

@@ -5,22 +5,6 @@ myApp.controller('dbController',['$scope','$rootScope','$firebaseAuth','$firebas
     function($scope, $rootScope, $firebaseAuth, $firebaseArray, FIREBASE_DB_URL, $location, $state) {
 
 
-        /* NAME FIELD*/
-        var nameRef = new Firebase(FIREBASE_DB_URL + '/name');
-        var nameInfo = $firebaseArray(nameRef);
-        $scope.names = nameInfo;
-
-        /* NAME FIELD FUNCTION */
-        $scope.addName = function() {
-            nameInfo.$add({
-                name: $scope.nameField,
-                date: Firebase.ServerValue.TIMESTAMP
-            }).then(function () {
-                $scope.nameField = '';
-            });
-        };
-
-
         /////////////////////////////////////////////////////////
         /* IMAGES CONTENT */
         /*
@@ -47,8 +31,6 @@ myApp.controller('dbController',['$scope','$rootScope','$firebaseAuth','$firebas
             });
         };
         /////////////////////////////////////////////////////////
-
-
 
         /////////////////////////////////////////////////////////
         /* BIO CONTENT */
@@ -82,6 +64,16 @@ myApp.controller('dbController',['$scope','$rootScope','$firebaseAuth','$firebas
 
         $scope.uiRouterState = $state;
 
+
+
+
+
+
+
+
+
+        /////////////////////////////////////////////////////////
+
 /*
         /!* DELETE BIO *!/
         $scope.deleteBio = function() {
@@ -95,7 +87,24 @@ myApp.controller('dbController',['$scope','$rootScope','$firebaseAuth','$firebas
 
             console.log("remove");
         };
-*/
+
+        /*     NAME FIELD
+        var nameRef = new Firebase(FIREBASE_DB_URL + '/name');
+        var nameInfo = $firebaseArray(nameRef);
+        $scope.names = nameInfo;
+
+        /* NAME FIELD FUNCTION
+        $scope.addName = function() {
+            nameInfo.$add({
+                name: $scope.nameField,
+                date: Firebase.ServerValue.TIMESTAMP
+            }).then(function () {
+                $scope.nameField = '';
+            });
+        };
+
+
+         */
 
 
 
