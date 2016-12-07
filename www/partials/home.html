@@ -18,8 +18,8 @@
     </div>-->
 
 
-    <div class="row">
-        <div class="col-sm-4 col-md-8 col-lg-8" ng-repeat="(key, a) in images ">
+    <div class="row" ng-repeat="(key, a) in images | limitTo: 1">
+        <div class="col-sm-4 col-md-4 col-lg-4" ng-repeat="(key, a) in images">
             <div class="thumbnail">
                 <img ng-src="{{ a.image_url }}" alt="...">
                 <div class="caption">
@@ -30,6 +30,7 @@
             </div>
         </div>
     </div>
+
 
 
 
