@@ -109,6 +109,7 @@
     <input type="file" value="upload" id="fileButton">
     <h4>File URL:</h4>
     <span id="linkurl"></span>
+    <br>
     <span id="linkbox"></span>
 </div>
     </form>
@@ -152,7 +153,7 @@
             console.log(snapshot.metadata);
             var url = snapshot.metadata.downloadURLs[0];
             console.log('File available at', url);
-            document.getElementById('linkurl').innerHTML = '<a href="' +  url + '">URL: ' + url + '</a>';
+            document.getElementById('linkurl').innerHTML = '<span>URL: ' + url + ' </span>';
             document.getElementById('linkbox').innerHTML = '<img src="' +  url + '">';
             // <img src="smiley.gif" alt="Smiley face" height="42" width="42">
 

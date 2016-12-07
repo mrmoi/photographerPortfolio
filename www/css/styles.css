@@ -162,7 +162,41 @@ p.copyright {
     ul.social li a {
         font-size: .75em;
     }
+
 }
+
+/* ---------------------------------------------- */
+@media (min-width : 1224px) {
+    .logo a {
+        font-size: 2em;
+    }
+    .main {
+        /*padding-top: 5%;*/
+    }
+    .portfolio img {
+        margin-bottom: 10%;
+        margin-left: 10%;
+        width: 100%;
+    }
+    img.avatar {
+        margin-top: 15%;
+        margin-left: 20%;
+    }
+    h2.bio {
+        font-size: 1.8em;
+        margin-left: 10%;
+    }
+    p.bio {
+        font-size: 1.25em;
+        color: white;
+    }
+    ul.social li a {
+        font-size: .75em;
+    }
+}
+
+
+
 
 .navbar .navbar-default {
     background-color: black;
