@@ -254,6 +254,12 @@ progress[value]::-webkit-progress-value {
 
 }
 
+.thumbnail:hover {
+    opacity: 0.8;
+    transition: 0.3s ease-in-out;
+
+}
+
 .glyphicon {
     font-size: 1.6em;
     font-weight: bold;
