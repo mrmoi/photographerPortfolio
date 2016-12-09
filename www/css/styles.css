@@ -90,7 +90,7 @@ img:hover {
 ---------------------------------------------- */
 ul.social {
     display: block;
-    margin: 5% 0;
+    margin: 1% 0;
     list-style-type: none;
     text-align: center;
 }
@@ -245,30 +245,37 @@ progress[value]::-webkit-progress-value {
 
 
 .thumbnail {
-    background: #abbaab; /* fallback for old browsers */
-    background: -webkit-linear-gradient(to left, #abbaab , #ffffff); /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to left, #abbaab , #ffffff); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
+    background: #000000; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #000000 , #434343); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #000000 , #434343); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     /*border: 1px solid silver;*/
-
-
     padding: 10px 10px 10px 10px;
 }
 
 .thumbnail img {
-    min-width: 200px;
+    width: 350px;
+    height: 250px;
+}
 
+.thumbnail h4 {
+    color: white;
+    font-family: 'Optima', cursive;
+}
+
+.thumbnail p {
+    color: white;
+    font-family: 'Optima', cursive;
 }
 
 .glyphicon {
     font-size: 1.6em;
     font-weight: normal;
-    color: black;
-    text-shadow: 1px 1px white;
+    color: white;
+    text-shadow: 1px 1px blue;
 }
 
 .glyphicon:hover {
-    color: cyan;
+    color: white;
     text-shadow: 1px 1px black;
 }
 

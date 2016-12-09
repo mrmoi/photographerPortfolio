@@ -23,9 +23,9 @@
             <div class="thumbnail hvr-wobble-horizontal">
                 <img ng-src="{{ a.image_url }}" alt="...">
                 <div class="caption">
-                    <h3>{{ a.image_name }}</h3>
-                    <p>{{ a.image_info }}</p>
-
+                    <h4>{{ a.image_name }}</h4>
+                    <p>Description: {{ a.image_info }}</p>
+                    <p>Uploaded: {{ a.date | date:"MM/dd/yyyy 'at' h:mma"}}</p>
                     <a href="#" type="button" class="likeButton">
                         <span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>
                     </a>
