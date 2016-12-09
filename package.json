@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/mrmoi/photographerPortfolio/issues"
   },
-  "homepage": "https://github.com/mrmoi/photographerPortfolio#readme"
+  "homepage": "https://github.com/mrmoi/photographerPortfolio#readme",
+  "dependencies": {
+    "animate.css": "^3.5.2"
+  }
 }

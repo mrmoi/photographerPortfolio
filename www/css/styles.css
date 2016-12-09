@@ -17,6 +17,8 @@
 }
 .green {
     background-color: black;
+    border-bottom: 5px solid cyan;
+    border-top: 5px solid cyan;
 }
 /* Typography
 ---------------------------------------------- */
@@ -243,8 +245,11 @@ progress[value]::-webkit-progress-value {
 
 
 .thumbnail {
-    background-color: whitesmoke;
-    border: 3px solid black;
+    background: #abbaab; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #abbaab , #ffffff); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #abbaab , #ffffff); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    /*border: 2px solid black;*/
     box-shadow: 5px 5px 2.5px #888888;
     padding: 10px 10px 10px 10px;
 }
@@ -254,15 +259,15 @@ progress[value]::-webkit-progress-value {
 
 }
 
-.thumbnail:hover {
+/*.thumbnail:hover {
     opacity: 0.8;
     transition: 0.3s ease-in-out;
 
-}
+}*/
 
 .glyphicon {
     font-size: 1.6em;
-    font-weight: bold;
+    font-weight: normal;
     color: black;
     text-shadow: 1px 1px white;
 }
