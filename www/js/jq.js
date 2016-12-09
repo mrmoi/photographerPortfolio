@@ -1,6 +1,7 @@
 /**
  * Created by miniMoimartz on 12/8/16.
  */
+/*
 $(document).ready(function(e) {
 
     $("#thumb").hover(function () {
@@ -10,4 +11,4 @@ $(document).ready(function(e) {
 
     $("p").css("background-color", "yellow");
 
-});
+});*/
