@@ -11,17 +11,11 @@
 
 <div class="container main">
 
-<!--    <div class="row">
-        <div class="four columns portfolio" ng-repeat="(key, a) in images ">
-            <a class="image-link" href="img/horseshoebend.jpg"><img ng-src="{{ a.image_url }}"></a>
-        </div>
-    </div>-->
-
 
     <div class="row" ng-repeat="(key, a) in images | limitTo: 1">
         <div class="col-sm-4 col-md-4 col-lg-4" ng-repeat="(key, a) in images">
             <div class="thumbnail hvr-wobble-horizontal">
-                <img ng-src="{{ a.image_url }}" alt="...">
+                <a class="image-link" href="{{ a.image_url }}"><img ng-src="{{ a.image_url }}" alt="..."></a>
                 <div class="caption">
                     <h4>{{ a.image_name }}</h4>
                     <p>Description: {{ a.image_info }}</p>
@@ -33,41 +27,6 @@
             </div>
         </div>
     </div>
-
-
-
-
-<!--    <div class="four columns portfolio">
-            <a class="image-link" href="img/azranch.jpg"><img ng-src="{{ a.image_url }}"></a>
-        </div>
-        <div class="four columns portfolio">
-            <a class="image-link" href="img/grandcanyon1.jpg"><img ng-src="{{ a.image_url }}"></a>
-        </div>-->
-    <!--</div>-->
-
-<!--    <div class="row">
-        <div class="four columns portfolio">
-            <a class="image-link" href="img/grandcanyon2.jpg"><img src="img/grandcanyon2.jpg"></a>
-        </div>
-        <div class="four columns portfolio">
-            <a class="image-link" href="img/lakepowell.jpg"><img src="img/lakepowell.jpg"></a>
-        </div>
-        <div class="four columns portfolio">
-            <a class="image-link" href="img/sedona.jpg"><img src="img/sedona.jpg"></a>
-        </div>
-    </div>-->
-
-<!--    <div class="row">
-        <div class="four columns portfolio">
-            <a class="image-link" href="img/grandcanyon3.jpg"><img src="img/grandcanyon3.jpg"></a>
-        </div>
-        <div class="four columns portfolio">
-            <a class="image-link" href="img/lakepowell2.jpg"><img src="img/lakepowell2.jpg"></a>
-        </div>
-        <div class="four columns portfolio">
-            <a class="image-link" href="img/monumentvalley.jpg"><img src="img/monumentvalley.jpg"></a>
-        </div>
-    </div>-->
 
 </div>
 
@@ -111,31 +70,3 @@
 </footer>
 
 
-<!-- End Document
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-<script src="js/jquery.magnificpopup.js"></script>
-<script type="text/javascript">
-    // Initialize popup as usual
-    $('.image-link').magnificPopup({
-        type: 'image',
-        mainClass: 'mfp-with-zoom', // this class is for CSS animation below
-
-        zoom: {
-            enabled: true, // By default it's false, so don't forget to enable it
-
-            duration: 300, // duration of the effect, in milliseconds
-            easing: 'ease-in-out', // CSS transition easing function
-
-            // The "opener" function should return the element from which popup will be zoomed in
-            // and to which popup will be scaled down
-            // By defailt it looks for an image tag:
-            opener: function(openerElement) {
-                // openerElement is the element on which popup was initialized, in this case its <a> tag
-                // you don't need to add "opener" option if this code matches your needs, it's defailt one.
-                return openerElement.is('img') ? openerElement : openerElement.find('img');
-            }
-        }
-
-    });
-
-</script>

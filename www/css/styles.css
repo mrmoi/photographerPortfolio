@@ -279,6 +279,11 @@ progress[value]::-webkit-progress-value {
     text-shadow: 1px 1px black;
 }
 
+.form-group input {
+    width: 50%;
+}
 
-
-
+.form-group textarea {
+    width: 50%;
+    height: 25%;
+}

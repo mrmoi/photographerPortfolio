@@ -1,7 +1,9 @@
 <div class="container">
+    <div class="row">
+        <div class="col-md-8">
     <h3>Share something about you</h3>
     <form ng-submit="addBio()">
-        <div class="form-group form-group-lg">
+        <div class="form-group">
             <label>Name</label>
             <input type="text" ng-model="nameField" placeholder="Add your name so everyone could see!!!">
         </div>
@@ -14,15 +16,28 @@
             <input type="text" ng-model="imageField" placeholder="Paste your portrait's link here!">
         </div>
 
-        <button type="submit">Submit</button>
+        <button type="submit" class="hvr-grow-shadow">Submit</button>
     </form>
+        </div>
+    </div>
 
+
+
+    <div class="row">
+        <div class="col-md-8">
     <h3>Add photos to your portfolio</h3>
     <form ng-submit="addImage()">
-        <div class="form-group form-group-lg">
+
+        <div class="form-group">
             <label>Photo Name</label>
             <input type="text" ng-model="image_nameField" placeholder="Name your photo!!">
         </div>
+
+        <div class="form-group">
+            <label>Photo Description</label>
+            <textarea type="text" ng-model="image_descField" placeholder="Add a description"></textarea>
+        </div>
+
         <div class="form-group">
             <label>Photo Link</label>
             <textarea type="text" ng-model="image_urlField" placeholder="Copy the link here"></textarea>
@@ -35,6 +50,9 @@
 
         <button type="submit">Submit</button>
     </form>
+        </div>
+    </div>
+
 
     <h3>Store your images</h3>
 </div>
