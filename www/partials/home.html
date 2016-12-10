@@ -20,17 +20,17 @@
                 <a class="image-link" href="{{ a.image_url }}"><img ng-src="{{ a.image_url }}" alt="..."></a>
                 <div class="caption">
                     <h4>{{ a.image_name }}</h4>
-                    <p>Description: {{ a.image_info }}</p>
-                    <p>Uploaded: {{ a.date | date: "MM/dd/yy '@' h:mma" }}</p>
+                    <p>{{ a.image_desc }}</p>
+                    <p>{{ a.date | date: "MM/dd/yy '@' h:mma" }}</p>
 <!--                    <a href="#" type="button" class="likeButton">
                             <span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>
                     </a>-->
 
-                    <div class="round-button pull-right">
+<!--                    <div class="round-button pull-right">
                         <div class="round-button-circle">
                             <a href="http://example.com" class="round-button">1</a>
                         </div>
-                    </div>
+                    </div>-->
 
 
                 </div>
@@ -66,10 +66,10 @@
         <div class="row twelve columns">
             <ul class="social">
                 <li class="facebook"><a href="#"><i class="fa fa-facebook-square fa-lg"></i></a></li>
-                <li class="twitter"><a href="#"><i class="fa fa-twitter-square fa-lg"></i></a></li>
+                <li class="twitter"><a href="https://twitter.com/German4now"><i class="fa fa-twitter-square fa-lg"></i></a></li>
                 <li class="instagram"><a href="#"><i class="fa fa-instagram fa-lg"></i></a></li>
                 <li class="flickr"><a href="#"><i class="fa fa-flickr fa-lg"></i></a></li>
-                <li class="youtube"><a href="#"><i class="fa fa-youtube-square fa-lg"></i></a></li>
+                <li class="youtube"><a href="https://www.youtube.com/c/GermanDGutierrezVlogs"><i class="fa fa-youtube-square fa-lg"></i></a></li>
                 <li class="linkedin"><a href="#"><i class="fa fa-linkedin-square fa-lg"></i></a></li>
             </ul>
         </div>

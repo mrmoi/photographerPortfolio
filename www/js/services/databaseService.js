@@ -23,16 +23,18 @@ myApp.controller('dbController',['$scope','$rootScope','$firebaseAuth','$firebas
                 image_name: $scope.image_nameField,
                 image_url: $scope.image_urlField,
                 image_desc: $scope.image_descField,
-                //image_likes: $scope.image_likesField,
+                /*image_likes: $scope.image_likesField,*/
                 date: Firebase.ServerValue.TIMESTAMP
             }).then(function () {
                 $scope.image_nameField='';
                 $scope.image_descField='';
+                /*$scope.image_likesField=0;*/
                 $scope.image_urlField='';
-                //$scope.image_likesField='';
             });
         };
         /////////////////////////////////////////////////////////
+
+
 
         /////////////////////////////////////////////////////////
         /* BIO CONTENT */
@@ -65,13 +67,6 @@ myApp.controller('dbController',['$scope','$rootScope','$firebaseAuth','$firebas
         //$scope.myUrl = $location.path();
 
         $scope.uiRouterState = $state;
-
-
-
-
-
-
-
 
 
         /////////////////////////////////////////////////////////
@@ -107,12 +102,6 @@ myApp.controller('dbController',['$scope','$rootScope','$firebaseAuth','$firebas
 
 
          */
-
-
-
-
-
-
 
     }]); // END Controller
 
