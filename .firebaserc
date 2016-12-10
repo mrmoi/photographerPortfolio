@@ -1,5 +1,5 @@
 {
   "projects": {
-    "staging": "firebase-germanproductions"
+    "default": "firebase-germanproductions"
   }
 }
