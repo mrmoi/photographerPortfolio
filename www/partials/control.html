@@ -1,26 +1,41 @@
 <div class="container">
+
     <div class="row">
         <div class="col-md-8">
-    <h3>Share something about you</h3>
-    <form ng-submit="addBio()">
-        <div class="form-group">
-            <label>Name</label>
-            <input type="text" ng-model="nameField" placeholder="Add your name so everyone could see!!!">
-        </div>
-        <div class="form-group">
-            <label>About</label>
-            <textarea type="text" ng-model="aboutField" placeholder="Share a little bit about yourself"></textarea>
-        </div>
-        <div class="form-group">
-            <label>Image URL</label>
-            <input type="text" ng-model="imageField" placeholder="Paste your portrait's link here!">
-        </div>
+            <h3>First share something about you</h3>
+            <form ng-submit="addBio()">
+                <div class="form-group">
+                    <label>Name</label>
+                    <input type="text" ng-model="nameField" placeholder="Add your name so everyone could see!!!">
+                </div>
+                <div class="form-group">
+                    <label>About</label>
+                    <textarea type="text" ng-model="aboutField" placeholder="Share a little bit about yourself"></textarea>
+                </div>
+                <div class="form-group">
+                    <label>Image URL</label>
+                    <input type="text" ng-model="imageField" placeholder="Paste your portrait's link here!">
+                </div>
 
-        <button type="submit" class="hvr-grow-shadow">Submit</button>
-    </form>
+                <button type="submit" class="hvr-grow-shadow">Submit</button>
+            </form>
         </div>
     </div>
 
+
+    <div class="row">
+        <div class="col-md-8">
+            <h3>How it works</h3>
+            <ol>
+                <li>Store your image</li>
+                <li>Copy Link</li>
+                <li>Add a name to your image</li>
+                <li>Add a description</li>
+                <li>Paste the link you copied</li>
+                <li>Submit</li>
+            </ol>
+        </div>
+    </div>
 
 
     <div class="row">
@@ -48,7 +63,7 @@
             <input type="text" ng-model="imageField" placeholder="">
         </div>-->
 
-        <button type="submit">Submit</button>
+        <button type="submit" class="hvr-grow-shadow">Submit</button>
     </form>
         </div>
     </div>

@@ -111,7 +111,7 @@
 <div ng-controller="dbController" ng-show="uiRouterState.current.name == 'control'">
     <progress value="0" max="100" id="uploader">0%</progress>
     <input type="file" value="upload" id="fileButton">
-    <h4>File URL:</h4>
+    <h4>Copy Link &#8595;</h4>
     <span id="linkurl"></span>
     <br>
     <span id="linkbox"></span>
@@ -152,12 +152,14 @@
 
         //storageRef.child('pictures/' + file.name);
 
-        storageRef.child('pictures/' + file.name).put(file, metadata).then(function(snapshot) {
+        //child('pictures/' + file.name)
+
+        storageRef.put(file, metadata).then(function(snapshot) {
             console.log('Uploaded', snapshot.totalBytes, 'bytes.');
             console.log(snapshot.metadata);
             var url = snapshot.metadata.downloadURLs[0];
             console.log('File available at', url);
-            document.getElementById('linkurl').innerHTML = '<span>URL: ' + url + ' </span>';
+            document.getElementById('linkurl').innerHTML = '<span>' + url + ' </span>';
             document.getElementById('linkbox').innerHTML = '<img src="' +  url + '">';
             // <img src="smiley.gif" alt="Smiley face" height="42" width="42">
 
@@ -173,9 +175,10 @@
             })
 
 
-        }).catch(function(error) {
-            console.error('Upload failed:', error);
         });
+            /*.catch(function(error) {
+            console.error('Upload failed This is the error:', error);
+        });*/
 
 
         // Upload File
