@@ -39,6 +39,8 @@ p.bio {
     color: white;
     
 }
+
+
 /* Header & Navigation
 ---------------------------------------------- */
 header.main_nav {
@@ -46,29 +48,24 @@ header.main_nav {
     display: block;
 }
 .logo {
-    margin: 5% auto;
+    margin: 3% auto;
     text-align: center;
-    /*text-shadow: 3px 3px 4px black;*/
-    border: 3px solid darkslateblue;
-    /*border-radius: 50px;*/
+    border: 3px solid cyan;
     background-color: rgba(0, 0, 200, 0.5);
-    max-width: 75%;
-    font-family: 'Candal', sans-serif;
-    font-size: 1.4em;
-    font-weight: normal;
-    color: #000000;
-    /*background-color: #ffffff;*/
-    text-shadow: 2px 0 0 #bcbcbc, 4px 0 0 #9c9c9c;
-
+    max-width: 55%;
+    font-family: 'Marck Script', cursive;
+    font-weight: bold;
+    text-transform: capitalize;
     -webkit-border-radius: 36px 12px;
     border-radius: 80px; /* future proofing */
+    padding: 2%;
 
 }
 .logo a {
-    font-size: 3em;
+    font-size: 3.1em;
     color: cyan;
     text-decoration: none;
-    text-transform: uppercase;
+    text-transform: capitalize;
     padding: 2px 10px 0 10px;
     margin: 0;
 

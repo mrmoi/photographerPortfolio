@@ -1,7 +1,9 @@
 <header class="main_nav green">
     <div class="container">
-        <div class="twelve columns">
+        <div class="row">
+            <div class="col-md-12">
             <div class="logo"><a href="#">German Productions</a></div>
+            </div>
         </div>
     </div>
 </header>
@@ -19,12 +21,12 @@
                 <div class="caption">
                     <h4>{{ a.image_name }}</h4>
                     <p>Description: {{ a.image_info }}</p>
-                    <p>Uploaded: {{ a.date | date:"MM/dd/yyyy 'at' h:mma"}}</p>
-                    <a href="#" type="button" class="likeButton">
+                    <p>Uploaded: {{ a.date | date: "MM/dd/yy '@' h:mma" }}</p>
+<!--                    <a href="#" type="button" class="likeButton">
                             <span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>
-                    </a>
+                    </a>-->
 
-                    <div class="round-button">
+                    <div class="round-button pull-right">
                         <div class="round-button-circle">
                             <a href="http://example.com" class="round-button">1</a>
                         </div>
