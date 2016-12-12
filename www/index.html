@@ -8,7 +8,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
   <!-- Mobile Specific Metas –––––––––––––– -->
-  <meta name="viewport" content="width=device-width, initial-scale=1">k
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <!-- FONT –––––––––––––––––––––––––––––––––––––––––––––––––– -->
  <link href='https://fonts.googleapis.com/css?family=Abel|Oswald|Montserrat|Fredoka+One|Candal|Lobster|Bad+Script' rel='stylesheet' type='text/css'>
@@ -86,7 +86,9 @@
         console.log('getting file..');
         // Get file
         var file = e.target.files[0];
+
         console.log('got file');
+
         var metadata = {
             'contentType': file.type
         };

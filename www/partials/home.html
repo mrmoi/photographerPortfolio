@@ -17,7 +17,7 @@
     <div class="row" ng-repeat="(key, a) in images | limitTo: 1">
         <div class="col-sm-4 col-md-4 col-lg-4" ng-repeat="(key, a) in images">
             <div class="thumbnail hvr-wobble-horizontal">
-                <a class="image-link" href="{{ a.image_url }}"><img ng-src="{{ a.image_url }}" alt="..."></a>
+                <a class="image-link" href="{{ a.image_url }}" ><img ng-src="{{ a.image_url }}" alt="..."></a>
                 <div class="caption">
                     <h4>{{ a.image_name }}</h4>
                     <p>{{ a.image_desc }}</p>
