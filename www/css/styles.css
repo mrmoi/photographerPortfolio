@@ -21,10 +21,11 @@
     border-top: 25px solid darkgrey;*/
     border-top: 20px solid transparent;
     border-bottom: 20px solid transparent;
+    border-left: 0px solid transparent;
+    border-right: 0px solid transparent;
     -moz-border-image: -moz-linear-gradient(right, #3acfd5 0%, #3a4ed5 100%);
     -webkit-border-image: -webkit-linear-gradient(right, #3acfd5 0%, #3a4ed5 100%);
     border-image: linear-gradient(to left, #3acfd5 0%, #3a4ed5 100%);
-
     border-image-slice: 1;
 
 
@@ -281,7 +282,7 @@ progress[value]::-webkit-progress-value {
 }
 
 .glyphicon {
-    font-size: 1.6em;
+    font-size: 1.2em;
     font-weight: normal;
     color: white;
     text-shadow: 1px 1px blue;
