@@ -23,17 +23,33 @@ myApp.controller('dbController',['$scope','$rootScope','$firebaseAuth','$firebas
                 image_name: $scope.image_nameField,
                 image_url: $scope.image_urlField,
                 image_desc: $scope.image_descField,
-                /*image_likes: $scope.image_likesField,*/
+                image_likes: $scope.image_likesField,
                 date: Firebase.ServerValue.TIMESTAMP
             }).then(function () {
+                var count = 0;
+
                 $scope.image_nameField='';
                 $scope.image_descField='';
-                /*$scope.image_likesField=0;*/
+                $scope.image_likesField= count + 1;
                 $scope.image_urlField='';
             });
         };
         /////////////////////////////////////////////////////////
 
+/*        var likesRef = new Firebase(FIREBASE_DB_URL + '/likes');
+        var likesInfo = $firebaseArray(likesRef);
+        $scope.likes = likesInfo;
+
+        $scope.addlikes = function () {
+
+            var count;
+            likesInfo.$add({
+                likes_incre: $scope.likes_increment
+            }).then(function () {
+                $scope.likes_increment=count + 1;
+            })
+
+        };*/
 
 
         /////////////////////////////////////////////////////////
