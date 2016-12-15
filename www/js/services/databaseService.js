@@ -36,6 +36,18 @@ myApp.controller('dbController',['$scope','$rootScope','$firebaseAuth','$firebas
         var likesInfo = $firebaseArray(likesRef);
         $scope.likes = likesInfo;
 
+        $scope.addLikes = function (count) {
+            console.log('Start to add 1');
+
+            likesInfo.$add({
+                image_likes: $scope.likes_Field
+            }).then(function (count) {
+                $scope.likes_Field += count;
+            })
+
+            console.log('Finish adding 1');
+        };
+
 
 
 /*        var likesRef =  new Firebase(FIREBASE_DB_URL + '/likes');
