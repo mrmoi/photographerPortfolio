@@ -2,7 +2,7 @@
  * Created by miniMoimartz on 12/1/16.
  */
 
-var myApp = angular.module('myApp', ['ui.router', 'firebase'])
+var myApp = angular.module('myApp', ['ui.router', 'firebase', 'bootstrapLightbox'])
     .constant('FIREBASE_DB_URL', 'https://germanproductions.firebaseio.com/');
 
 

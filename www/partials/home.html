@@ -8,25 +8,27 @@
     </div>
 </header>
 
-<p>{{ myUrl }}</p>
-
 
 <div class="container main">
 
 
-    <div class="row" ng-repeat="(key, a) in images | limitTo: 1">
-        <div class="col-sm-4 col-md-4 col-lg-4" ng-repeat="(key, a) in images">
+    <div class="row" ng-repeat="(key, a) in imagesList | limitTo: 1">
+        <div class="col-sm-4 col-md-4 col-lg-4" ng-repeat="(key, a) in imagesList">
+
+
+
+
             <div class="thumbnail hvr-wobble-horizontal">
-                <a class="image-link" href="{{ a.image_url }}"><img ng-src="{{ a.image_url }}" alt="..."></a>
+                <a ng-click="openLightboxModal($index)">
+                    <img ng-src="{{ a.image_url }}" class="img-thumbnail">
+                </a>
+
                 <div class="caption">
                     <h4>{{ a.image_name }}</h4>
                     <p>{{ a.image_desc }}</p>
                     <p>{{ a.date | date: "MM/dd/yy '@' h:mma" }}</p>
-                    <p>Likes: {{  }}</p>
-<!--                    <a href="#" type="button" class="likeButton">
-                            <span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>
-                    </a>-->
 
+                    <p>Likes: {{  }}</p>
                    <div class="round-button pull-right">
                         <div class="round-button-circle">
                             <a class="round-button" ng-href="#likes" id="likes" ng-model="likes_Field" ng-click="addLikes(count = 1)" ng-init="0">
@@ -34,10 +36,10 @@
                             </a>
                         </div>
                     </div>
-
-
                 </div>
             </div>
+
+
         </div>
     </div>
 

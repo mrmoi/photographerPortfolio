@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/mrmoi/photographerPortfolio#readme",
   "dependencies": {
+    "angular-bootstrap-lightbox": "^0.12.0",
     "animate.css": "^3.5.2"
   }
 }

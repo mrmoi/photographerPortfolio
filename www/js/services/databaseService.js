@@ -1,8 +1,8 @@
 /**
  * Created by miniMoimartz on 12/1/16.
  */
-myApp.controller('dbController',['$scope','$rootScope','$firebaseAuth','$firebaseArray','FIREBASE_DB_URL','$location', '$state',
-    function($scope, $rootScope, $firebaseAuth, $firebaseArray, FIREBASE_DB_URL, $location, $state) {
+myApp.controller('dbController',['$scope','$rootScope','$firebaseAuth','$firebaseArray','FIREBASE_DB_URL','$location', '$state', 'Lightbox',
+    function($scope, $rootScope, $firebaseAuth, $firebaseArray, FIREBASE_DB_URL, $location, $state, $Lightbox) {
 
 
         /////////////////////////////////////////////////////////
@@ -30,6 +30,27 @@ myApp.controller('dbController',['$scope','$rootScope','$firebaseAuth','$firebas
                 $scope.image_urlField='';
             });
         };
+
+
+
+
+        var imageListRef = new Firebase(FIREBASE_DB_URL + '/images/image_url');
+        var imageListInfo = $firebaseArray(imageListRef);
+        $scope.imagesList = imageListInfo;
+
+        $scope.listImages = function () {
+
+            imageListURL: $scope.image_urlField;
+        };
+
+        $scope.openLightboxModal = function (index) {
+            Lightbox.openModal($scope.imageList, index);
+        };
+
+
+
+
+
         /////////////////////////////////////////////////////////
 
         var likesRef = new Firebase(FIREBASE_DB_URL + '/likes');
@@ -135,6 +156,15 @@ myApp.controller('dbController',['$scope','$rootScope','$firebaseAuth','$firebas
 
 
          */
+
+
+    $scope.load = function () {
+
+     console.log('Im inside a controller..');
+
+    };
+
+    $scope.load();
 
     }]); // END Controller
 
