@@ -53,7 +53,7 @@ myApp.controller('dbController',['$scope','$rootScope','$firebaseAuth','$firebas
 
         /////////////////////////////////////////////////////////
 
-        var likesRef = new Firebase(FIREBASE_DB_URL + '/likes');
+ /*       var likesRef = new Firebase(FIREBASE_DB_URL + '/likes');
         var likesInfo = $firebaseArray(likesRef);
         $scope.likes = likesInfo;
 
@@ -67,7 +67,7 @@ myApp.controller('dbController',['$scope','$rootScope','$firebaseAuth','$firebas
             })
 
             console.log('Finish adding 1');
-        };
+        };*/
 
 
 
